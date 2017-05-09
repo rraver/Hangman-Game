@@ -5,6 +5,8 @@ var triesLeft = 13;
 var usedLetters = [];
 var gamesWon = 0;
 var gamesLost = 0;
+var gameStatus = false;
+var wonPhrase ="congrats you won";
 
 var cRandom = countries[Math.floor(Math.random() * countries.length)];
 cRandom = cRandom.toLowerCase();
@@ -25,7 +27,17 @@ document.onkeyup = function(event) {
   userInput = userInput.toLowerCase();
   console.log(userInput);
 
-// for (i=0; i < usedLetters.length; i++) {
+if (gameStatus === true) {
+  var cRandom = countries[Math.floor(Math.random() * countries.length)];
+  onScreen = [];
+  for (i=0; i < cRandom.length; i++) {
+    if (cRandom[i] === " ") {
+      cRandom[i] = "_";
+    }
+      onScreen.push("_");
+  }
+
+} else if (gameStatus === false) {
   if (userInput !== usedLetters[i]) {
     for (i=0; i < cRandom.length; i++) {
       if (userInput === cRandom[i]) {
@@ -37,7 +49,8 @@ document.onkeyup = function(event) {
         console.log(verify);
         console.log(verify2);
         if (onScreen.join("") === cRandom.join("")) {
-          console.log("winner winner chicken dinner");
+          var span = document.getElementById("wonPhrase");
+          span.textContent = wonPhrase;
           gamesWon++;
         }
       }
@@ -53,6 +66,7 @@ document.onkeyup = function(event) {
     span.textContent = onScreen.join(" ");
     var span = document.getElementById("gamesWon");
     span.textContent = gamesWon;
+    gameStatus = true;
+  }
 console.log(triesLeft);
 }
-// }
