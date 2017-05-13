@@ -3,20 +3,44 @@
   <head>
     <meta charset="utf-8">
     <title>HangMan Game</title>
-    <link rel"stylesheet" type"text/css" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Armata|Permanent+Marker" rel="stylesheet">
+    <link href="assets\css\style.css" type"text/css" rel"stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <style>
+
+    .customfont {
+      font-family: 'Permanent Marker', cursive;
+      font-size: 100%;
+      color: white;
+    }
+
+    .bodytext {
+      font-family: 'Armata', sans-serif;
+    }
+
+    body {
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+
   </head>
   <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+        <h1> Lets play hangman </h1>
+        </div>
+        <div class="col-lg-4 customfont">
+          <p class="bodytext"><span id="gamePhrase"></span> <br>
+          <p class="guesstext"><span id="wordGuess"></span> <br>
 
-
-    <p><span id="onScreen"></span> <br>
-      <p><span id="gamesWon"></span> <br>
-        <p><span id="gamePhrase"></span> <br>
-
-
-
+          <p class="bodytext">Games Won: <span id="gamesWon"></span>
+          <p class="bodytext">Games Lost: <span id="gamesLost"></span> <br>
+          <p class="bodytext">Used Letters <br> <span id="usedLetters"></span> <br>
+        </div>
   <script src="assets/javascript/game.js"></script>
-
-
-    asdfsdfsdf
   </body>
 </html>
