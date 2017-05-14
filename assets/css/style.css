@@ -1,3 +1,19 @@
-.text {
+.customfont {
   font-family: 'Permanent Marker', cursive;
+  font-size: 100%;
+  color: white;
+}
+
+.bodytext {
+  font-family: 'Armata', sans-serif;
+}
+
+body {
+  background-image: url("../image/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: white;
 }
